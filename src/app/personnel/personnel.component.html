@@ -1,0 +1,111 @@
+ <!--<div class="container" [ngSwitch]="competence">
+  <label for="niveau"> Select Niveau </label>
+                <select class="form-control" id="niveau" change="filterCompetencesByCategory()" [(ngModel)]="selectedniveau" >
+                      <option *ngFor="let cat of niveauId" [value]="cat.id">{{cat.designation}}</option>
+                   </select>-->
+                  <!-- <ng-select [items]="NiveauId" 
+                      bindLabel="libelle" 
+                     bindValue="libelle"
+                     [clearable]="true"
+                       [(ngModel)]="selectedNiveau"  name="niveau" (ngModelChange)="filterPersonnelByNiveau($event)"></ng-select> 
+                       <br>
+                       <br>
+                    <table id="table" datatable class="table datatable"  >
+                       <thead>
+                          <tr>
+      
+                             <th scope="col">Personnel</th>
+                            <th scope="col">Niveau</th>
+                          </tr>
+                       </thead>       
+                       <tbody>
+                        
+                           <ng-container *ngFor="let item of personnel; let i= index ; ">  
+                           <ng-container  *ngFor="let item2 of NiveauId;">
+                              <tr>
+                            <th scope="row">{{item.nom}}</th>   
+                            <td >{{item2.libelle}}</td>
+                           </tr>
+                           </ng-container>  
+                        </ng-container>
+                       
+                       </tbody>
+                    </table>
+
+                    <button type="button"  class="btn btn-secondary">close</button>
+                   <mat-paginator [length]="100"
+               [pageSize]="10"
+               [pageSizeOptions]="[5, 10, 25, 100]"
+               aria-label="Select page">
+ </mat-paginator>-->
+<!--</div>--> 
+
+
+
+
+                <div>
+                
+              <!--   <select class="form-control" id="categorie" change="filterCompetencesByCategory()" [(ngModel)]="selectedcategorie" >
+                     <option *ngFor="let cat of categorieId" [value]="cat.id">{{cat.designation}}</option>
+                  </select>-->
+      
+                <div mat-dialog-title>{{selectedComp.designation}}</div>
+                <div>
+              
+               
+                     <!--<div class="icon" >
+                     <button type="button" datatable [dtOptions]="dtOptions"[dtTrigger]="dtTrigger" class="btn btn"(click)="downloadaCsvFile(selectedComp.designation)"><i class="bx bx-download">Télècharger</i> </button>   
+                     </div>-->
+              
+                     <br>
+                     <br>
+                     
+                   <table id="table"  class="table datatable"  >
+
+                      <thead>
+                         <tr>
+                            <th scope="col">libelle</th>
+                           <th scope="col">Personnel</th>
+                     
+                         </tr>
+                      </thead>
+                      <tbody >
+                        
+                         <ng-container *ngFor="let item of NiveauId;let i index">
+                           <ng-container *ngIf="selectedComp.id ==  item.competence_id">
+                          
+                           <tr>
+                        
+                           <ng-container *ngIf="getPersonnelName(item.personnel_id) | async as personnelName">
+                           
+                              <td>  {{ personnelName }}</td>
+                            
+                           </ng-container>
+                           <td>
+                             
+                              
+                              {{item.libelle}} 
+   
+                        </td>
+                          
+                    <!--  <div  *ngIf="item.isEdit">
+                           <button type="submit">Update</button>
+                           <button (click)="item.isEdit=false">Cancel</button>
+
+                        </div>--> 
+                     
+                  
+                           </tr>
+                        </ng-container>
+                     </ng-container>
+                      </tbody>
+                   </table>
+                   <button type="button"  class="btn btn-secondary" (click)="closePopup()">close</button>
+                 <!--  <mat-paginator [length]="100"
+              [pageSize]="10"
+              [pageSizeOptions]="[5, 10, 25, 100]"
+              aria-label="Select page">
+</mat-paginator>-->
+                </div>
+    
+               </div>

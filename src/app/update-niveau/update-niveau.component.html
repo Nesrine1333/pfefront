@@ -1,0 +1,35 @@
+<h1>update</h1>
+<form  class="example-form" [formGroup]="Niveauform"(ngSubmit)="Savee()" >
+    <br>
+    <br>
+
+    <mat-form-field class="example-full-width" appearance="fill">
+ 
+        <mat-label>competence</mat-label>
+        <input matInput placeholder="competence_id" formControlName="competence_id" [value]='getCompetenceDesign(Niveauform.value.competence_id) | async' >
+     </mat-form-field>
+    
+    <mat-form-field class="example-full-width" appearance="fill">
+
+       <mat-label>Personnel</mat-label>
+       
+         <input matInput placeholder="PersonnelName" formControlName="personnel_id" [value]='getPersonnelName(Niveauform.value.personnel_id) | async' >
+    </mat-form-field>
+   
+    <br>
+    <br>
+ <mat-form-field class="example-full-width" appearance="fill">
+    <mat-label>Niveau</mat-label>
+     <mat-select formControlName="libelle" required >
+     <mat-option *ngFor="let cat of ListNiveau" [value]="cat">
+       {{cat}}
+     </mat-option>
+   </mat-select>
+ 
+  
+ </mat-form-field>
+  
+    <div class="example-button-row">
+       <button mat-raised-button  type="submit" class="btn btn-outline-info"> Save</button> | <button  mat-raised-button type="button" class="btn btn-outline-danger" (click)="closePopup()" > Close</button>
+    </div>
+    </form>

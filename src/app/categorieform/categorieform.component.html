@@ -1,0 +1,22 @@
+<form  class="example-form" [formGroup]="categorieform" (ngSubmit)="SaveCategorie()" >
+
+    <mat-form-field class="example-full-width" appearance="fill">
+ 
+       <mat-label>ID</mat-label>
+       <input matInput placeholder="ID" formControlName="id">
+    </mat-form-field>
+    <br>
+    <br>
+    <mat-form-field class="example-full-width" appearance="fill">
+ 
+       <mat-label>Categorie</mat-label>
+       <input matInput placeholder="lib_categorie" formControlName="lib_categorie">
+    </mat-form-field>
+ 
+    <br>
+    <br>
+   
+    <div class="example-button-row">
+       <button mat-raised-button  type="submit" class="btn btn-outline-info"> Save</button> | <button  mat-raised-button type="button" class="btn btn-outline-danger" (click)="closePopup()" > Close</button>
+    </div>
+    </form>

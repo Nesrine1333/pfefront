@@ -1,0 +1,59 @@
+<main id="main" class="main">
+   <div class="pagetitle">
+        <h1>Catégorie Tables</h1>
+       <nav>
+          <ol class="breadcrumb">
+             <li class="breadcrumb-item"><a routerLink="/">Home</a></li>
+             <li class="breadcrumb-item">Catégorie</li>
+          </ol>
+       </nav>
+    </div>
+    <section class="section">
+       <div class="row">
+          <div class="col-lg-12">
+             <div class="card">
+                <div class="card-body">
+                   
+                  <br>
+                  
+                     <br>
+                     <br>
+                     <table datatable [dtOptions]="dtOptions" [dtTrigger]="dtTrigger" class="table datatable">
+                        <thead>
+                          <tr>
+                            <th scope="col">#</th>
+                            <th scope="col">Designation</th>
+                            <th scope="col">Competence</th>
+                          </tr>
+                        </thead>
+                        <tbody>
+                           <ng-container *ngFor="let item of categorie; let i = index">
+                             <tr>
+                               <th scope="row">{{ i + 1 }}</th>
+                               <td>{{ item.lib_categorie }}</td>
+                               <td>
+                                 <button class="btn btn-link competence-button collapsed" (click)="toggleCompetence(i)">
+                                    <span class="button-text">{{ showCompetence[i] ? 'Masquer la compétence' : 'Montrer la compétence' }}</span>
+                                    <i class="button-icon bi bi-chevron-down"></i>
+                                  </button>
+                                 <ul *ngIf="showCompetence[i]">
+                                   <li *ngFor="let competence of item.competence; let j = index">
+                                     <span class="competence-designation">{{ competence.designation }}</span>
+                                   </li>
+                                 </ul>
+                               </td>
+                             </tr>
+                           </ng-container>
+                         </tbody>
+                      </table>
+                 <!--  <mat-paginator [length]="100"
+              [pageSize]="10"
+              [pageSizeOptions]="[5, 10, 25, 100]"
+              aria-label="Select page">
+</mat-paginator>-->
+                </div>
+             </div>
+          </div>
+       </div>
+    </section>
+ </main>

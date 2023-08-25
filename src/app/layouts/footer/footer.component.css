@@ -1,0 +1,6 @@
+.back-to-top {
+    position:fixed;
+    bottom: 100px;
+    right: 20px;; /* Adjust the left value as per your preference */
+    z-index: 9999;
+  }

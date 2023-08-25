@@ -1,0 +1,20 @@
+.logo img{
+    max-height: 70px !important;
+    margin-block-end: 50px !important;
+}
+
+#page{
+    height:100 vh;
+    width: 100vw;
+    display: flex;
+    align-items:center;
+    justify-content: center;
+}
+
+#image{
+    max-height: 70px !important;
+    margin-block-end: 50px !important;
+    align-items:center;
+    justify-content: center;
+}
+

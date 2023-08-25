@@ -1,0 +1,57 @@
+<main id="main" class="main">
+   <div class="pagetitle">
+        <h1>Formation Tables</h1>
+       <nav>
+          <ol class="breadcrumb">
+             <li class="breadcrumb-item"><a routerLink="/dashboard">Home</a></li>
+             <li class="breadcrumb-item">Formation</li>
+          </ol>
+       </nav>
+    </div>
+    <section class="section">
+       <div class="row">
+          <div class="col-lg-12">
+             <div class="card">
+                <div class="card-body">
+                  <br>
+                     <button type="button"style="color:blue;" class="btn btn-outline-secondary"(click)="OpenPopup('')"> ajouter</button>
+                     <br>
+                     <br>
+                   <table id="tableComp" datatable [dtOptions]="dtOptions" [dtTrigger]="dtTrigger" class="table datatable" >
+                      <thead>
+                         <tr>
+                            <th scope="col">#</th>
+                            <th scope="col">Titre</th>
+                           <th scope="col">description</th>
+                           <th scope="col"> Date</th>
+                           <th scope="col">state</th>
+                            <th scope="col">Action</th>
+                         </tr>
+                      </thead>
+                      <tbody>
+                         <ng-container *ngFor="let item of formation ; let i= index">
+                           <tr [ngClass]="{'colored': item.state}">
+                           <th scope="row">{{i+1}}</th>
+                            <td><a type="button"  class="btn" (click)="PersonnelOpen(item)">{{item.titre}}</a></td>
+                           <td>{{item.description}}</td>
+                           <td>{{formatDate(item.dateFormation)}}</td>
+                           <td><input class="checkbox" type="checkbox" [(ngModel)]="item.state" (change)="toggleDone(item)" disabled ><span>{{item.state  ? 'Done' :'Not Done'}}</span> <br>
+                        <!--   <input class="checkbox" type="checkbox"  [(ngModel)]="!item.state" (change)="toggleNotDone(item)"><span>Not yet</span> --></td>
+                            <td><button type="button"  class="btn  btn-outline"(click)="Editformation(item.id)" ><span class="icon"><i class="ri-edit-2-fill" style="color: rgb(55, 177, 163)" ></i></span></button>
+                              <br> <br> <button type="button" class="btn btn-outline"(click)="Removeformation(item.id)" >  <span class="icon"><i class="ri-delete-bin-6-fill" style="color: red"></i></span></button> 
+                           </td>
+                           </tr>
+                      </ng-container>
+                      </tbody>
+                   </table>
+                 <!--  <mat-paginator [length]="100"
+              [pageSize]="10"
+              [pageSizeOptions]="[5, 10, 25, 100]"
+              aria-label="Select page">
+</mat-paginator>-->
+                </div>
+             </div>
+          </div>
+       </div>
+    </section>
+ </main>

@@ -1,0 +1,106 @@
+<main id="main" class="main">
+   <div class="pagetitle">
+    
+        <h1>Competence Tables</h1>
+       <nav>
+          <ol class="breadcrumb">
+             <li class="breadcrumb-item"><a routerLink="/">Home</a></li>
+             <li class="breadcrumb-item">Competence</li>
+          </ol>
+       </nav>
+    </div>
+    <section class="section">
+    
+       <div class="row">
+          <div class="col-lg-12">
+             <div class="card">
+                <div style="background-color: rgb(232, 231, 231);" class="card-body">
+                  <br>
+                 
+                  <mat-form-field class="example-full-width" appearance="fill">
+                     <mat-label>Filter</mat-label>
+                     
+                        <input matInput placeholder="Search"(keyup)="searchfilter($event)"  />
+                        <mat-icon matSuffix>search</mat-icon>
+                </mat-form-field>
+                <br>
+                <br>
+                
+               
+                <ng-select [items]="categorieSelect" 
+                bindLabel="lib_categorie" 
+               bindValue="id_categorie"
+                 [(ngModel)]="selectedcategorie" id="categorie" placeholder="Choisire une categorie" name="categorie"(ngModelChange)="filterCompetencesByCategory($event)" >
+                </ng-select> 
+             
+                <br>
+                   <h2 style="color: rgb(38, 38, 88);">Ajouter des competences</h2>
+                     <button type="button"style="color:#191970; background-color:#ADD8E6;" class="btn "(click)="OpenPopup('')"> ajouter</button>
+                     <br>
+                     <br>
+                     <h2 style="color: rgb(30, 30, 145);">Consulter la list Des Personnel</h2>
+                     <button type="button"style="color:#191970; background-color:#ADD8E6;" class="btn "(click)="OpenPopupPersonnelAll('')"> List des Personnel Total </button>
+
+                     <br>
+                     <br>
+                     <br>
+                <div>
+                <!-- <label for="categorie"> Select Categorie </label>
+               <select class="form-control" id="categorie" change="filterCompetencesByCategory()" [(ngModel)]="selectedcategorie" >
+                     <option *ngFor="let cat of categorieId" [value]="cat.id">{{cat.designation}}</option>
+                  </select>-->
+                  </div>
+                
+                      <br>
+                      <br>
+                  <div class="mat-elevation-z8">
+                     <table mat-table  [dataSource]="finaldata" matSort class="mat-elevation-z8 demo-table">
+
+                        <ng-container  matColumnDef="no">
+                           <th class="mat-column-no" mat-sort-header mat-header-cell  *matHeaderCellDef>No</th>
+                           <td mat-cell *matCellDef='let item'>{{item.index}}</td>
+                        </ng-container> 
+
+                        <ng-container matColumnDef="designation">
+                           <th class="mat-column-demo-symbol" mat-header-cell  *matHeaderCellDef> Designation</th>
+                           <td mat-cell *matCellDef='let item'><a type="button"  class="btn"(click)="PersonnelOpen(item)">{{item.designation}}</a></td>
+                        </ng-container>|
+                        <ng-container  matColumnDef="categorieId">
+                           <th class="mat-column-demo-symbol " mat-sort-header mat-header-cell  *matHeaderCellDef>Categorie</th>
+                           <td mat-cell *matCellDef='let item'>
+                              <ng-container *ngIf="getCategForCompetence(item.categorieId) | async as categoriName">
+                              {{categoriName}}
+                           </ng-container></td>
+                        </ng-container>
+                   
+
+                        <ng-container  matColumnDef="action">
+                           <th class="mat-column-demo-symbol" mat-header-cell *matHeaderCellDef> Action</th>
+                           <td mat-cell *matCellDef='let item'>  
+                              <button mat-icon-button color="primary" (click)="EditCompetence(item.id)" >
+                                 <mat-icon>edit</mat-icon>
+                               </button>
+                              <button mat-icon-button color="warn" (click)="RemoveCompetence(item.id)" >
+                              <mat-icon>delete</mat-icon>
+                            </button>   </td>
+                        </ng-container>
+
+                        <tr mat-header-row *matHeaderRowDef="displayColumns"></tr>
+                        <tr mat-row *matRowDef='let row;columns:displayColumns;'></tr>
+
+                     </table>
+                     <mat-paginator [pageSizeOptions]="[5,10,20]" showFirstLastButtons>
+
+                     </mat-paginator>
+                  </div>
+                 <!--  <mat-paginator [length]="100"
+              [pageSize]="10"
+              [pageSizeOptions]="[5, 10, 25, 100]"
+              aria-label="Select page">
+</mat-paginator>-->
+                </div>
+             </div>
+          </div>
+       </div>
+    </section>
+ </main>

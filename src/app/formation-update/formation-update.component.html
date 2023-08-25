@@ -1,0 +1,42 @@
+<form  class="example-form" [formGroup]="formationForm" (ngSubmit)="SaveFormation()" >
+
+    <div mat-dialog-content>
+     <mat-form-field class="example-full-width" appearance="fill">
+  
+        <mat-label>ID</mat-label>
+        <input matInput placeholder="ID" formControlName="id" hidden>
+     </mat-form-field>
+     <br>
+     <br>
+     <mat-form-field class="example-full-width" appearance="fill">
+  
+        <mat-label>Titre</mat-label>
+        <input matInput placeholder="titre" formControlName="titre">
+     </mat-form-field>
+  
+     <br>
+     <br>
+     <mat-form-field class="example-full-width" appearance="fill">
+  
+         <mat-label>Description</mat-label>
+         <input matInput placeholder="description" formControlName="description">
+      </mat-form-field>
+  
+      <div>
+         <mat-form-field lass="example-full-width" appearance="fill">
+            <mat-label>Choose a date</mat-label>
+            <input matInput [matDatepicker]="dp" [min]="currentDate" [value]="dateFormation"  >
+            <mat-hint>DD/MM/YYYY</mat-hint>
+            <mat-datepicker-toggle matSuffix [for]="dp"></mat-datepicker-toggle>
+            <mat-datepicker #dp
+           ></mat-datepicker>
+          </mat-form-field>
+         <mat-checkbox formControlName="state" [disabled]="isDateInFuture()">done</mat-checkbox>
+        </div>
+      </div>  
+    
+    <br>
+     <div mat-dialog-actions>
+        <button mat-raised-button  type="submit" class="btn btn-outline-info"> Save</button> | <button  mat-raised-button type="button" class="btn btn-outline-danger" (click)="closePopup()" > Close</button>
+     </div>
+     </form>

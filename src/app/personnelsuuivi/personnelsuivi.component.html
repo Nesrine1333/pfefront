@@ -1,0 +1,34 @@
+
+<div>
+<div mat-dialog-title>{{selectedFormation.titre}}</div>
+                 
+                   <table id="table"  class="table datatable"  >
+                      <thead>
+                         <tr>
+                           <th scope="col">Personnel</th>
+                         </tr>
+                      </thead>
+                      <tbody>
+                        
+                         <ng-container *ngFor="let item of suiviID;">
+                           <ng-container *ngIf="selectedFormation.id ==  item.formation_id">
+                           <tr>
+
+                           <ng-container *ngIf="getPersonnelName(item.personnel_id) | async as personnelName">
+                              <td>  {{ personnelName}}</td>
+                            </ng-container>
+                           
+                           </tr>
+                        </ng-container>
+                     </ng-container>
+                      </tbody>
+                   </table>
+                   <button type="button"  class="btn btn-secondary" (click)="closePopup()">close</button>
+                 <!--  <mat-paginator [length]="100"
+              [pageSize]="10"
+              [pageSizeOptions]="[5, 10, 25, 100]"
+              aria-label="Select page">
+</mat-paginator>-->
+                
+   
+</div>

@@ -1,0 +1,16 @@
+<ng-container *ngIf="isLoggedIn(); else loginBlock">
+<app-header *ngIf="!( _router.url === '/pages-login' || _router.url === '/pages-error404')" ></app-header>
+<app-sidebar *ngIf="!( _router.url === '/pages-login' || _router.url === '/pages-error404')" ></app-sidebar>
+<router-outlet></router-outlet>
+<app-footer *ngIf="!( _router.url === '/pages-login' || _router.url === '/pages-error404')" ></app-footer>
+
+<df-messenger *ngIf="!( _router.url === '/pages-login' || _router.url === '/pages-error404')"
+  intent="WELCOME"
+  chat-title="chatAssitant"
+  agent-id="f00ad759-bade-4de2-91cd-0a23484a4233"
+  language-code="fr"
+></df-messenger>
+</ng-container>
+<ng-template #loginBlock>
+  <app-pages-login></app-pages-login>
+</ng-template>

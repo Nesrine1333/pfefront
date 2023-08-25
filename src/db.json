@@ -1,0 +1,34 @@
+{
+    "competences": [
+      {
+        "id": 1,
+        "designation": "Soudage",
+        "pourcentage": 85
+      },
+      {
+        "id": 2,
+        "designation": "Usinage",
+        "pourcentage": 75
+      },
+      {
+        "id": 3,
+        "designation": "Assemblage",
+        "pourcentage": 90
+      },
+      {
+        "id": 4,
+        "designation": "Menuiserie",
+        "pourcentage": 80
+      },
+      {
+        "id": 5,
+        "designation": "Peinture et Revêtement",
+        "pourcentage": 70
+      },
+      {
+        "id": 6,
+        "designation": "Plomberie",
+        "pourcentage": 75
+      }
+    ]
+}

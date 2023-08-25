@@ -1,0 +1,457 @@
+{
+  "competences": [
+    {
+      "id": 1,
+      "designation": "Maintenance des machines-outils",
+      "categorieId": 1,
+      "idniveau": 1
+    },
+    {
+      "id": 2,
+      "designation": "Programmation des robots industriels",
+      "categorieId":3 ,
+      "idniveau": 2
+    },
+    {
+      "id": 3,
+      "designation": "Réglage des presses hydrauliques",
+      "categorieId": 4,
+      "idniveau": 3
+    },
+    {
+      "id": 4,
+      "designation": "Maintenance des systèmes de convoyage",
+      "categorieId": 4,
+      "idniveau": 5
+    },
+    {
+      "id": 5,
+      "designation": "Réparation des machines d'injection plastique",
+      "categorieId":5 ,
+      "idniveau": 6
+    },
+    {
+      "id": 6,
+      "designation": "Programmation des machines à commande numérique",
+      "categorieId":7 ,
+      "idniveau": 7
+    },
+    {
+      "id": 7,
+      "designation": "Maintenance des systèmes de refroidissement industriel",
+      "categorieId": 10 ,
+      "idniveau": 4
+    },
+    {
+      "id": 8,
+      "designation": "Réglage des machines de découpe laser",
+      "categorieId": 8,
+      "idniveau": 8
+    }
+  ],
+
+  "niveau": [
+    {
+      "id": 1,
+      "libelle": "E",
+      "competenceId": "Maintenance des machines-outils",
+      "PersonnelId": 152
+    },
+    {
+      "id": 2,
+      "libelle": "O",
+      "competence": "Réglage des machines de découpe laser",
+      "PersonnelId": 153
+    },
+    {
+      "id": 3,
+      "libelle": "F",
+      "competenceId": "Réparation des machines d'injection plastique",
+      "PersonnelId": 154
+    },
+    {
+      "id": 4,
+      "libelle": "N",
+      "competenceId": "Programmation des robots industriels",
+      "PersonnelId": 155
+    },
+    {
+      "id": 5,
+      "libelle": "E",
+      "competenceId": "Programmation des robots industriels",
+      "PersonnelId": 156
+    },
+    {
+      "id": 6,
+      "libelle": "O",
+      "competenceId": "Maintenance des machines-outils",
+      "PersonnelId": 157
+    },
+    {
+      "id": 7,
+      "libelle": "F",
+      "competenceId": "Maintenance des machines-outils",
+      "PersonnelId": 158
+    },
+    {
+      "id": 8,
+      "libelle": "N",
+      "competenceId":"Maintenance des machines-outils",
+      "PersonnelId": 159
+    },
+    {
+      "id": 9,
+      "libelle": "E",
+      "competenceId":"Programmation des robots industriels",
+      "PersonnelId": 160
+    },
+    {
+      "id": 10,
+      "libelle": "O",
+      "competenceId": "Programmation des robots industriels",
+      "PersonnelId": 161
+    }
+  ],
+  "categories": [
+    {
+      "id_categorie": 1,
+      "designation": "Machines-outils",
+      "desComp": "Maintenance des machines-outils"
+    },
+    {
+      "id_categorie": 3,
+      "designation": "Presses hydrauliques",
+      "desComp": "Réglage des presses hydrauliques"
+    },
+    {
+      "id_categorie": 4,
+      "designation": "Convoyeurs",
+      "desComp": "Maintenance des systèmes de convoyage"
+    },
+    {
+      "id_categorie": 5,
+      "designation": "Machines d'injection plastique",
+      "desComp": "Réparation des machines d'injection plastique"
+    },
+    {
+      "id_categorie": 6,
+      "designation": "Machines à commande numérique",
+      "desComp": "Programmation des machines à commande numérique"
+    }
+  ],
+  "formations": [
+    {
+      "id": 1,
+      "titre": "Formation sur l'utilisation de la machine X",
+      "description": "Cette formation vise à familiariser les employés avec la machine X et à leur permettre de maîtriser son fonctionnement, ses réglages et ses procédures de maintenance."
+    },
+    {
+      "id": 2,
+      "titre": "Formation sur les procédures de sécurité",
+      "description": "Cette formation vise à sensibiliser les employés aux procédures de sécurité en vigueur dans l'entreprise et à les former aux bonnes pratiques à adopter lors de l'utilisation des machines."
+    },
+    {
+      "id": 3,
+      "titre": "Formation avancée sur la maintenance préventive",
+      "description": "Cette formation s'adresse aux techniciens de maintenance et vise à approfondir leurs connaissances et compétences en matière de maintenance préventive des machines industrielles."
+    },
+    {
+      "id": 4,
+      "titre": "Formation sur les techniques d'assemblage",
+      "description": "Cette formation permet aux employés d'acquérir les compétences nécessaires pour effectuer des assemblages complexes en suivant des procédures précises."
+    },
+    {
+      "id": 5,
+      "titre": "Formation sur la programmation des machines",
+      "description": "Cette formation enseigne aux participants les bases de la programmation des machines industrielles, leur permettant ainsi de créer des programmes personnalisés pour des tâches spécifiques."
+    },
+    {
+      "id": 6,
+      "titre": "Formation sur la gestion de la qualité",
+      "description": "Cette formation se concentre sur les principes et les techniques de gestion de la qualité dans le contexte d'une entreprise industrielle, visant à améliorer la satisfaction du client et la performance globale."
+    },
+    {
+      "id": 7,
+      "titre": "Formation sur la sécurité au travail",
+      "description": "Cette formation sensibilise les employés aux risques potentiels sur le lieu de travail et leur enseigne les mesures de sécurité nécessaires pour prévenir les accidents et les blessures."
+    },
+    {
+      "id": 8,
+      "titre": "Formation sur la logistique et la gestion des stocks",
+      "description": "Cette formation aborde les aspects clés de la logistique et de la gestion des stocks, fournissant aux participants les connaissances nécessaires pour optimiser les opérations et minimiser les coûts."
+    },
+    {
+      "id": 9,
+      "titre": "Formation sur l'ergonomie au travail",
+      "description": "Cette formation met l'accent sur l'importance de l'ergonomie dans l'environnement de travail, en fournissant des conseils pratiques pour améliorer le confort, la sécurité et l'efficacité des employés."
+    },
+    {
+      "id": 10,
+      "titre": "Formation sur la maintenance des équipements",
+      "description": "Cette formation fournit aux techniciens les compétences nécessaires pour entretenir et réparer divers équipements industriels, en minimisant les temps d'arrêt"
+    }
+  ],
+  "suivi": [
+    {
+      "id": 1,
+      "formationId": 1,
+      "personnelId": 161
+    },
+    {
+      "id": 2,
+      "formationId": 2,
+      "personnelId": 202
+    },
+    {
+      "id": 3,
+      "formationId": 3,
+      "personnelId": 203
+    },
+    {
+      "id": 4,
+      "formationId": 4,
+      "personnelId": 204
+    },
+    {
+      "id": 5,
+      "formationId": 5,
+      "personnelId": 205
+    },
+    {
+      "id": 6,
+      "formationId": 6,
+      "personnelId": 206
+    },
+    {
+      "id": 7,
+      "formationId": 7,
+      "personnelId": 207
+    },
+    {
+      "id": 8,
+      "formationId": 8,
+      "personnelId": 208
+    },
+    {
+      "id": 9,
+      "formationId": 9,
+      "personnelId": 209
+    },
+    {
+      "id": 10,
+      "formationId": 10,
+      "personnelId": 161
+    }
+  ],
+
+
+  "personnel": [
+    {
+      "id": 152,
+      "matricule": "M001",
+      "nom": "Smith",
+      "prenom": "John",
+      "indirect": false,
+      "serviceCiId": 201,
+      "poste": "Manager",
+      "idSite": 301,
+      "controleur": true,
+      "inspecteur": false,
+      "matriculeId": 401,
+      "testeurLabo": false,
+      "evaluateur": true,
+      "monitrice": true,
+      "controleurFinChaine": false,
+      "controleurEnCours": true,
+      "suiviId":8,
+      "niveauId":7
+    },
+    {
+      "id": 153,
+      "matricule": "M",
+      "nom": "Johnson",
+      "prenom": "Emily",
+      "indirect": true,
+      "serviceCiId": 202,
+      "poste": "Supervisor",
+      "idSite": 302,
+      "controleur": false,
+      "inspecteur": true,
+      "matriculeId": 402,
+      "testeurLabo": true,
+      "evaluateur": false,
+      "monitrice": false,
+      "controleurFinChaine": true,
+      "controleurEnCours": false,
+      "suiviId":7,
+      "niveauId":3
+    },
+    {
+      "id": 154,
+      "matricule": "M003",
+      "nom": "Williams",
+      "prenom": "Michael",
+      "indirect": false,
+      "serviceCiId": 203,
+      "poste": "Coordinator",
+      "idSite": 303,
+      "controleur": true,
+      "inspecteur": false,
+      "matriculeId": 403,
+      "testeurLabo": false,
+      "evaluateur": true,
+      "monitrice": true,
+      "controleurFinChaine": false,
+      "controleurEnCours": true,
+      "suiviId":7,
+      "niveauId":3
+    },
+    {
+      "id": 155,
+      "matricule": "M004",
+      "nom": "Brown",
+      "prenom": "Olivia",
+      "indirect": true,
+      "serviceCiId": 204,
+      "poste": "Analyst",
+      "idSite": 304,
+      "controleur": false,
+      "inspecteur": true,
+      "matriculeId": 404,
+      "testeurLabo": true,
+      "evaluateur": false,
+      "monitrice": false,
+      "controleurFinChaine": true,
+      "controleurEnCours": false,
+      "suiviId":2,
+      "niveauId":5
+    },
+    {
+      "id": 156,
+      "matricule": "M005",
+      "nom": "Jones",
+      "prenom": "Sophia",
+      "indirect": false,
+      "serviceCiId": 205,
+      "poste": "Engineer",
+      "idSite": 305,
+      "controleur": true,
+      "inspecteur": false,
+      "matriculeId": 405,
+      "testeurLabo": false,
+      "evaluateur": true,
+      "monitrice": true,
+      "controleurFinChaine": false,
+      "controleurEnCours": true,
+      "suiviId":4,
+      "niveauId":2
+    }, {
+      "id": 157,
+      "matricule": "M006",
+      "nom": "Miller",
+      "prenom": "Jacob",
+      "indirect": false,
+      "serviceCiId": 206,
+      "poste": "Developer",
+      "idSite": 306,
+      "controleur": true,
+      "inspecteur": false,
+      "matriculeId": 406,
+      "testeurLabo": false,
+      "evaluateur": true,
+      "monitrice": true,
+      "controleurFinChaine": false,
+      "controleurEnCours": true,
+      "suiviId":1,
+      "niveauId":2
+    },
+    {
+      "id": 158,
+      "matricule": "M007",
+      "nom": "Davis",
+      "prenom": "Emma",
+      "indirect": true,
+      "serviceCiId": 207,
+      "poste": "Designer",
+      "idSite": 307,
+      "controleur": false,
+      "inspecteur": true,
+      "matriculeId": 407,
+      "testeurLabo": true,
+      "evaluateur": false,
+      "monitrice": false,
+      "controleurFinChaine": true,
+      "controleurEnCours": false,
+      "suiviId":3,
+      "niveauId":2
+    },
+    {
+      "id": 159,
+      "matricule": "M008",
+      "nom": "Wilson",
+      "prenom": "Aiden",
+      "indirect": false,
+      "serviceCiId": 208,
+      "poste": "Manager",
+      "idSite": 308,
+      "controleur": true,
+      "inspecteur": false,
+      "matriculeId": 408,
+      "testeurLabo": false,
+      "evaluateur": true,
+      "monitrice": true,
+      "controleurFinChaine": false,
+      "controleurEnCours": true,
+      "suiviId":1,
+      "niveauId":2
+    },
+    {
+      "id": 160,
+      "matricule": "M009",
+      "nom": "Moore",
+      "prenom": "Mia",
+      "indirect": true,
+      "serviceCiId": 209,
+      "poste": "Supervisor",
+      "idSite": 309,
+      "controleur": false,
+      "inspecteur": true,
+      "matriculeId": 409,
+      "testeurLabo": true,
+      "evaluateur": false,
+      "monitrice": false,
+      "controleurFinChaine": true,
+      "controleurEnCours": false,
+      "suiviId":1,
+      "niveauId":1
+    },
+    {
+      "id": 161,
+      "matricule": "M010",
+      "nom": "Taylor",
+      "prenom": "Liam",
+      "indirect": false,
+      "serviceCiId": 210,
+      "poste": "Coordinator",
+      "idSite": 310,
+      "controleur": true,
+      "inspecteur": false,
+      "matriculeId": 410,
+      "testeurLabo": false,
+      "evaluateur": true,
+      "monitrice": true,
+      "controleurFinChaine": false,
+      "controleurEnCours": true,
+      "suiviId":1,
+      "niveauId":1
+    }
+  ],
+
+  "login": [
+    {
+      "username": "Jouple",
+      "email": "nesrine.ncibi@polytechnicien.tn",
+      "password": "99880700"
+    }
+  ]
+}

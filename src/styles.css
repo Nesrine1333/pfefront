@@ -1,0 +1,17 @@
+/* You can add global styles to this file, and also import other style files */
+@import "~@ng-select/ng-select/themes/material.theme.css";
+
+html, body { height: 100%; }
+body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }
+
+.mat-dialog-container{
+    width:fit-content ;
+    width: -moz-fit-content ;
+    height:fit-content ;
+}
+
+.mat-form-field {
+    display: contents !important;
+    position: relative !important;
+    text-align: left !important;
+}

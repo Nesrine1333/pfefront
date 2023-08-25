@@ -1,0 +1,106 @@
+.competence-button {
+    background: none;
+    border: none;
+    cursor: pointer;
+    padding: 0;
+  }
+
+  .competence-button:focus {
+    outline: none;
+  }
+
+  .competence-button .button-text {
+    display: inline-block;
+    margin-right: 5px;
+  }
+
+  .competence-button .button-icon {
+    transform: rotate(90deg);
+    transition: transform 0.3s ease;
+  }
+
+  .competence-button.collapsed .button-icon {
+    transform: rotate(0deg);
+  }
+
+  .competence-list {
+    display: none;
+    list-style-type: none;
+    margin-top: 5px;
+    padding-left: 15px;
+  }
+
+  .competence-list-item {
+    margin-bottom: 5px;
+  }
+
+  .competence-designation {
+    font-weight: bold;
+    color: #333;
+  }
+
+  .table.datatable {
+    width: 100%;
+    border-collapse: collapse;
+    margin-bottom: 1rem;
+    color: #333;
+  }
+
+  .table.datatable th,
+  .table.datatable td {
+    padding: 12px;
+    text-align: left;
+    border-bottom: 1px solid #ddd;
+  }
+
+  .table.datatable thead th {
+    background-color: #f8f9fa;
+    color: #333;
+    font-weight: bold;
+  }
+
+  .table.datatable tbody tr:nth-child(even) {
+    background-color: #f9f9f9;
+  }
+
+  .table.datatable .competence-button {
+    background: none;
+    border: none;
+    cursor: pointer;
+    padding: 0;
+  }
+
+  .table.datatable .competence-button:focus {
+    outline: none;
+  }
+
+  .table.datatable .competence-button .button-text {
+    display: inline-block;
+    margin-right: 5px;
+  }
+
+  .table.datatable .competence-button .button-icon {
+    transform: rotate(90deg);
+    transition: transform 0.3s ease;
+    color: #333;
+  }
+
+  .table.datatable .competence-button.collapsed .button-icon {
+    transform: rotate(0deg);
+  }
+
+  .table.datatable .competence-list {
+    display: none;
+    list-style-type: none;
+    margin-top: 5px;
+    padding-left: 15px;
+  }
+
+  .table.datatable .competence-list-item {
+    margin-bottom: 5px;
+  }
+
+  .table.datatable .competence-designation {
+    font-weight: bold;
+    color: #333;
+  }

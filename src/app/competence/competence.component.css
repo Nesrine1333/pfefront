@@ -1,0 +1,67 @@
+a:hover {
+    color: rgb(31, 118, 150);
+  }
+
+  .demo-table {
+    width: 100%;
+  }
+
+  
+  th{
+    background-color: rgba(164, 215, 201, 0.499);
+    color: rgba(14, 7, 58, 0.793);
+    position: relative;
+    font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-size: medium;
+  }
+
+  table{
+    background-color: rgb(249, 243, 236);
+  }
+
+  mat-paginator{
+    background-color: rgb(249, 243, 236);
+  }
+
+  .mat-column-no{
+    width: 32px;
+    border-right: 1px solid currentColor;
+    padding-right: 24px;
+    text-align: center;
+  }
+  .mat-column{
+    text-align: center;
+  }
+
+  .search-container {
+    position: relative;
+  }
+  
+  .search-icon {
+    position: absolute;
+    top: 50%;
+    left: 10px;
+    transform: translateY(-50%);
+    color: gray;
+  }
+  .example-form {
+    min-width: 150px;
+    max-width: 500px;
+    width: 100%;
+  }
+  
+  .example-full-width {
+    width: 100%;
+  }
+
+  .demo-table {
+    width: 100%;
+  }
+
+  
+  .mat-column-demo-symbol {
+    text-align: center;
+    font-weight: bold;
+  }
+  
+  

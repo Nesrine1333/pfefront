@@ -1,0 +1,4 @@
+form .example-full-width{
+    width: -moz-fit-content !important;
+    width: fit-content !important;
+}
